@@ -1,2 +1,20 @@
-[InternetShortcut]
-URL=https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/palindrome-check-2/
+#include <iostream>
+#include<string.h>
+ 
+using namespace std;
+int main()
+{
+    char S[100];
+    cin>>S;
+    int h=strlen(S);
+    char B[h];
+    for(int i=0,j=h-1;i<h;i++,j--){
+      B[i]=S[j];
+    }
+    if(strcmp(S,B)==0)
+    cout<<"YES";
+    else
+    cout<<"NO";
+    return 0;
+    
+}
