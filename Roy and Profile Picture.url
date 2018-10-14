@@ -1,2 +1,23 @@
-[InternetShortcut]
-URL=https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/roy-and-profile-picture/
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int L,N;
+	cin>>L>>N;
+	int W[N],H[N];
+	for(int k=0;k<N;k++){
+	    cin>>W[k]>>H[k];
+	}
+	
+	for(int i=0;i<N;i++){
+	    if(W[i]<L||H[i]<L)
+	    cout<<"UPLOAD ANOTHER"<<endl;
+	    else if(H[i]==W[i]&&(H[i]>=L||W[i]>=L))
+	    cout<<"ACCEPTED"<<endl;
+	    else
+	    cout<<"CROP IT"<<endl;
+	    
+	}
+return 0;
+}
